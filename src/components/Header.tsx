@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
-import { Menu, LayoutGrid, Sun, Moon } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { useTheme } from 'next-themes';
-import Link from 'next/link';
-import { ModeToggle } from './ModeToggle';
+import { Menu, LayoutGrid, Sun, Moon } from "lucide-react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import { ModeToggle } from "./ModeToggle";
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
@@ -39,12 +39,12 @@ export default function Header() {
         </Button>
 
         {/* Logo/Brand */}
-        <Link
+        <a
           href="/"
           className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
         >
           <span className="font-semibold text-lg md:text-xl">Energent.ai</span>
-        </Link>
+        </a>
 
         {/* Gallery Link */}
         <motion.div
@@ -59,7 +59,9 @@ export default function Header() {
             title="Gallery"
           >
             <LayoutGrid className="h-4 w-4 transition-transform duration-200 group-hover:scale-110" />
-            <span className="text-sm font-medium hidden sm:inline">Gallery</span>
+            <span className="text-sm font-medium hidden sm:inline">
+              Gallery
+            </span>
           </Link>
         </motion.div>
       </motion.div>
@@ -76,4 +78,4 @@ export default function Header() {
       </motion.div>
     </div>
   );
-} 
+}

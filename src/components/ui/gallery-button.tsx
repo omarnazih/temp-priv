@@ -56,7 +56,7 @@ export function GalleryButton({
       size={size}
       onClick={handleClick}
     >
-      <a href={`${location.pathname.replace('/gallery', '')}${href}`} className="flex items-center justify-center w-full gap-2">
+      <a href={`${href}`} className="flex items-center justify-center w-full gap-2">
         {children}
       </a>
     </Button>
